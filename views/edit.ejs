@@ -8,7 +8,7 @@
 <body>
     <h1>Here You are going to Update Your username : <%= user.email %></h1>
     <form method="post" action="/user/<%= user.id %>?_method=PATCH"  >
-        <textarea name="usernmae" id="" rows="2">   
+        <textarea name="username" id="" rows="2">   
             <%= user.username %>
         </textarea>
         <input type="password" name="password" placeholder="enter your password" required>

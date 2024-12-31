@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <style>
+      table,
+      td,
+      th {
+        border: 2px solid black;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>Here the data about All users...</h1>
+    <table>
+      <tr>
+        <th>ID</th>
+        <th>email</th>
+        <th>username</th>
+        <th>Update</th>
+      </tr>
+      <% for(item of result) {%>
+      <tr>
+        <td><%= item.id %></td>
+        <td><%= item.email %></td>
+        <td><%= item.username %></td>
+        <td>
+            <form method="get" action='/user/<%= item.id %>/edit'>
+                <button type="submit">Edit UserName</button>
+            </form>
+        </td>
+      </tr>
+      <% } %>
+    </table>
+  </body>
+</html>
